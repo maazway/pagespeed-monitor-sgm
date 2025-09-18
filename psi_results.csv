@@ -1,0 +1,5 @@
+url,strategy,performance,accessibility,best_practices,seo,error
+https://example.com/page1,mobile,100,88,96,80,
+https://example.com/page1,desktop,100,88,96,80,
+https://example.com/page2,mobile,100,88,96,80,
+https://example.com/page2,desktop,100,88,96,80,

@@ -1,0 +1,5 @@
+url,strategy
+https://example.com/page1,mobile
+https://example.com/page1,desktop
+https://example.com/page2,mobile
+https://example.com/page2,desktop

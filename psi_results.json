@@ -1,0 +1,37 @@
+{
+  "generated_at": "UTC",
+  "data": [
+    {
+      "url": "https://example.com/page1",
+      "strategy": "mobile",
+      "performance": 100,
+      "accessibility": 88,
+      "best_practices": 96,
+      "seo": 80
+    },
+    {
+      "url": "https://example.com/page1",
+      "strategy": "desktop",
+      "performance": 100,
+      "accessibility": 88,
+      "best_practices": 96,
+      "seo": 80
+    },
+    {
+      "url": "https://example.com/page2",
+      "strategy": "mobile",
+      "performance": 100,
+      "accessibility": 88,
+      "best_practices": 96,
+      "seo": 80
+    },
+    {
+      "url": "https://example.com/page2",
+      "strategy": "desktop",
+      "performance": 100,
+      "accessibility": 88,
+      "best_practices": 96,
+      "seo": 80
+    }
+  ]
+}

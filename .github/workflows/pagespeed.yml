@@ -1,0 +1,67 @@
+name: Build & Deploy PSI Dashboard
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Ambil data history lama dari gh-pages supaya tidak hilang
+      - name: Checkout gh-pages (for history)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+          persist-credentials: false
+        continue-on-error: true
+
+      - name: Restore history.json & history/ from gh-pages
+        run: |
+          set -e
+          SRC="gh-pages"
+          DEST="pagespeed-monitor-ci/dashboard"
+          mkdir -p "$DEST"
+          if [ -f "$SRC/history.json" ]; then cp -f "$SRC/history.json" "$DEST/"; fi
+          if [ -d "$SRC/history" ]; then rsync -a "$SRC/history/" "$DEST/history/"; fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run PSI Dashboard Script
+        env:
+          PSI_API_KEY: ${{ secrets.PSI_API_KEY }}
+          LOCALE: "en"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python pagespeed-monitor-ci/psi_csv_dashboard.py \
+            --csv pagespeed-monitor-ci/urls.csv \
+            --out-csv pagespeed-monitor-ci/psi_results.csv \
+            --out-json pagespeed-monitor-ci/psi_results.json \
+            --out-html pagespeed-monitor-ci/dashboard/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: pagespeed-monitor-ci/dashboard
+          enable_jekyll: false
