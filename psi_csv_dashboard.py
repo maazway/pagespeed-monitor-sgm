@@ -421,7 +421,6 @@ def render_dashboard(rows, out_html, maintainer_name="MaazWay", maintainer_link=
 
 # ---------------- main ----------------
 def main():
-    print("PSI_API_KEY =", os.getenv("PSI_API_KEY"))  # Tambahkan baris ini untuk cek
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", default="urls.csv")
     parser.add_argument("--out-csv", default="psi_results.csv")
