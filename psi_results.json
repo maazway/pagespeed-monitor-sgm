@@ -2,36 +2,40 @@
   "generated_at": "UTC",
   "data": [
     {
-      "url": "https://example.com/page1",
+      "url": "https://generasimaju.co.id",
       "strategy": "mobile",
-      "performance": 100,
-      "accessibility": 88,
-      "best_practices": 96,
-      "seo": 80
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0,
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en"
     },
     {
-      "url": "https://example.com/page1",
+      "url": "https://generasimaju.co.id",
       "strategy": "desktop",
-      "performance": 100,
-      "accessibility": 88,
-      "best_practices": 96,
-      "seo": 80
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0,
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en"
     },
     {
-      "url": "https://example.com/page2",
+      "url": "https://generasimaju.co.id/produk",
       "strategy": "mobile",
-      "performance": 100,
-      "accessibility": 88,
-      "best_practices": 96,
-      "seo": 80
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0,
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id%2Fproduk&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en"
     },
     {
-      "url": "https://example.com/page2",
+      "url": "https://generasimaju.co.id/produk",
       "strategy": "desktop",
-      "performance": 100,
-      "accessibility": 88,
-      "best_practices": 96,
-      "seo": 80
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0,
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id%2Fproduk&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en"
     }
   ]
 }

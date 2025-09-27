@@ -1,5 +1,5 @@
 url,strategy,performance,accessibility,best_practices,seo,error
-https://example.com/page1,mobile,100,88,96,80,
-https://example.com/page1,desktop,100,88,96,80,
-https://example.com/page2,mobile,100,88,96,80,
-https://example.com/page2,desktop,100,88,96,80,
+https://generasimaju.co.id,mobile,0,0,0,0,429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en
+https://generasimaju.co.id,desktop,0,0,0,0,429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en
+https://generasimaju.co.id/produk,mobile,0,0,0,0,429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id%2Fproduk&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en
+https://generasimaju.co.id/produk,desktop,0,0,0,0,429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fgenerasimaju.co.id%2Fproduk&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en
