@@ -6,28 +6,39 @@ on:
     - cron: "0 23 * * *"
 
 permissions:
-  contents: write
+  contents: write  # wajib: agar GITHUB_TOKEN bisa push ke gh-pages
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Ambil data history lama dari gh-pages supaya tidak hilang
+      # Cek apakah branch gh-pages sudah ada di remote
+      - name: Check if gh-pages exists
+        id: ghp
+        run: |
+          if git ls-remote --exit-code --heads origin gh-pages > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Hanya checkout gh-pages kalau memang ada
       - name: Checkout gh-pages (for history)
+        if: steps.ghp.outputs.exists == 'true'
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: gh-pages
           persist-credentials: false
-        continue-on-error: true
 
       - name: Restore history.json & history/ from gh-pages
+        if: steps.ghp.outputs.exists == 'true'
         run: |
           set -e
           SRC="gh-pages"
@@ -39,7 +50,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"  # 3.11 lebih cepat; tetap kompatibel
 
       - name: Install dependencies
         run: |
@@ -60,8 +71,10 @@ jobs:
             --out-html pagespeed-monitor-ci/dashboard/index.html
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: pagespeed-monitor-ci/dashboard
           enable_jekyll: false
+          # optional: keep history dashboard
+          commit_message: "deploy: PSI Dashboard (commit ${{ github.sha }})"
