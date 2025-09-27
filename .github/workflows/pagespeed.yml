@@ -3,10 +3,15 @@ name: Build & Deploy PSI Dashboard
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 23 * * *" # 06:00 WIB
 
+# Required so GITHUB_TOKEN can push to gh-pages
 permissions:
-  contents: write  # wajib: agar GITHUB_TOKEN bisa push ke gh-pages
+  contents: write
+
+concurrency:
+  group: pagespeed-dashboard
+  cancel-in-progress: false
 
 jobs:
   build-deploy:
@@ -18,17 +23,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Cek apakah branch gh-pages sudah ada di remote
+      # Detect if gh-pages exists (so we can restore history files)
       - name: Check if gh-pages exists
         id: ghp
         run: |
-          if git ls-remote --exit-code --heads origin gh-pages > /dev/null 2>&1; then
+          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
             echo "exists=true" >> "$GITHUB_OUTPUT"
           else
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # Hanya checkout gh-pages kalau memang ada
+      # Only checkout gh-pages if it already exists
       - name: Checkout gh-pages (for history)
         if: steps.ghp.outputs.exists == 'true'
         uses: actions/checkout@v4
@@ -37,12 +42,13 @@ jobs:
           path: gh-pages
           persist-credentials: false
 
-      - name: Restore history.json & history/ from gh-pages
+      # Restore history.json & history/ if available
+      - name: Restore history assets
         if: steps.ghp.outputs.exists == 'true'
         run: |
           set -e
           SRC="gh-pages"
-          DEST="pagespeed-monitor-ci/dashboard"
+          DEST="dashboard"
           mkdir -p "$DEST"
           if [ -f "$SRC/history.json" ]; then cp -f "$SRC/history.json" "$DEST/"; fi
           if [ -d "$SRC/history" ]; then rsync -a "$SRC/history/" "$DEST/history/"; fi
@@ -50,7 +56,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"  # 3.11 lebih cepat; tetap kompatibel
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -64,17 +70,17 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python pagespeed-monitor-ci/psi_csv_dashboard.py \
-            --csv pagespeed-monitor-ci/urls.csv \
-            --out-csv pagespeed-monitor-ci/psi_results.csv \
-            --out-json pagespeed-monitor-ci/psi_results.json \
-            --out-html pagespeed-monitor-ci/dashboard/index.html
+          mkdir -p dashboard
+          python psi_csv_dashboard.py \
+            --csv urls.csv \
+            --out-csv psi_results.csv \
+            --out-json psi_results.json \
+            --out-html dashboard/dashboard.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: pagespeed-monitor-ci/dashboard
+          publish_dir: dashboard
           enable_jekyll: false
-          # optional: keep history dashboard
           commit_message: "deploy: PSI Dashboard (commit ${{ github.sha }})"
