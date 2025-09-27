@@ -80,3 +80,11 @@ jobs:
           publish_dir: dashboard
           enable_jekyll: false
           commit_message: "deploy: PSI Dashboard (commit ${{ github.sha }})"
+
+      - name: Notify Telegram
+        if: success()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d parse_mode=Markdown \
+            -d text="✅ *PSI Dashboard updated!*\n\n🔗 [Dashboard](https://maazway.github.io/pagespeed-monitor-sgm/)\n📊 [History JSON](https://maazway.github.io/pagespeed-monitor-sgm/history.json)\n📄 [CSV](https://maazway.github.io/pagespeed-monitor-sgm/psi_results.csv)"
