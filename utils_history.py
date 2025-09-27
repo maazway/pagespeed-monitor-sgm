@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 HISTORY_DIR = Path("dashboard/history")
 HISTORY_FILE = Path("dashboard/history.json")
-HISTORY_MAX_ENTRIES = 5000  # ring buffer di file utama
+HISTORY_MAX_ENTRIES = 500  # ring buffer di file utama, simpan 500 run terakhir
 
 def _ensure_dirs():
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
@@ -49,10 +49,12 @@ def append_history_with_rotation(results):
     # keep last HISTORY_MAX_ENTRIES
     if len(data) > HISTORY_MAX_ENTRIES:
         data = data[-HISTORY_MAX_ENTRIES:]
-    HISTORY_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    HISTORY_FILE.write_text(
+        json.dumps(data, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8"
+    )
 
     # monthly archive file
-    # Use month from 'now' to group this execution
     month_key = now[:7]  # YYYY-MM
     month_path = HISTORY_DIR / f"{month_key}.json"
     try:
@@ -62,4 +64,12 @@ def append_history_with_rotation(results):
     except Exception:
         mdata = []
     mdata.extend(out_rows)
-    month_path.write_text(json.dumps(mdata, ensure_ascii=False, indent=2), encoding="utf-8")
+    month_path.write_text(
+        json.dumps(mdata, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8"
+    )
+
+    print(
+        f"✅ history.json updated: {len(data)} records (last {HISTORY_MAX_ENTRIES}); "
+        f"{month_path.name} archive: {len(mdata)} records"
+    )
