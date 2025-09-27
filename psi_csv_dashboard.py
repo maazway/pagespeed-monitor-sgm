@@ -166,7 +166,7 @@ def render_dashboard(rows, out_html, maintainer_name="MaazWay", maintainer_link=
     gen_ts = datetime.now(wib).strftime("%d/%m/%Y %H:%M:%S WIB")
 
     # HTML template NON f-string (gunakan placeholder)
-    html = """<!doctype html><html lang='id'>
+    html = r"""<!doctype html><html lang='id'>
 <meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>PageSpeed Dashboard</title>
 <style>
@@ -421,6 +421,7 @@ def render_dashboard(rows, out_html, maintainer_name="MaazWay", maintainer_link=
 
 # ---------------- main ----------------
 def main():
+    print("PSI_API_KEY =", os.getenv("PSI_API_KEY"))  # Tambahkan baris ini untuk cek
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", default="urls.csv")
     parser.add_argument("--out-csv", default="psi_results.csv")
