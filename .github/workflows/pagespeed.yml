@@ -5,7 +5,6 @@ on:
   schedule:
     - cron: "0 23 * * *" # 06:00 WIB
 
-# Required so GITHUB_TOKEN can push to gh-pages
 permissions:
   contents: write
 
@@ -23,7 +22,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Detect if gh-pages exists (so we can restore history files)
       - name: Check if gh-pages exists
         id: ghp
         run: |
@@ -33,7 +31,6 @@ jobs:
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # Only checkout gh-pages if it already exists
       - name: Checkout gh-pages (for history)
         if: steps.ghp.outputs.exists == 'true'
         uses: actions/checkout@v4
@@ -42,7 +39,6 @@ jobs:
           path: gh-pages
           persist-credentials: false
 
-      # Restore history.json & history/ if available
       - name: Restore history assets
         if: steps.ghp.outputs.exists == 'true'
         run: |
@@ -75,7 +71,7 @@ jobs:
             --csv urls.csv \
             --out-csv psi_results.csv \
             --out-json psi_results.json \
-            --out-html dashboard/dashboard.html
+            --out-html dashboard/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -22,25 +22,22 @@ def _post(text: str) -> bool:
     except Exception:
         return False
 
-def notify_run(results, title: str = "PageSpeed Report") -> bool:
-    """Send a compact summary to Telegram."""
-    if not isinstance(results, list) or not results:
-        return False
-
-    lines = [f"<b>{title}</b>"]
-    for r in results:
-        url = r.get("url","");
-        st  = r.get("strategy","");
-        p   = r.get("performance", 0);
-        a   = r.get("accessibility", 0);
-        b   = r.get("best_practices", 0);
-        s   = r.get("seo", 0);
-        err = r.get("error");
-        if err:
-            lines.append(f"• <code>{st}</code> — {url}\n  ❗ <i>{err}</i>")
-        else:
-            lines.append(f"• <code>{st}</code> — {url}\n  P:{p} A:{a} BP:{b} SEO:{s}")
+def notify_simple_report(dashboard_url: str, workflow_url: str = "", status: str = "SUCCESS") -> bool:
+    """Kirim pesan ringkas hasil PageSpeed ke Telegram."""
     wib = timezone(timedelta(hours=7))
-    ts = datetime.now(wib).strftime("%d/%m/%Y %H:%M WIB")
-    lines.append(f"\n<i>Generated {ts}</i>")
+    ts = datetime.now(wib).strftime("%d/%m/%Y %H:%M:%S WIB")
+    lines = [
+        "<b>Hasil Pengecekan PageSpeed</b>",
+        f"Tanggal & Waktu: {ts}",
+        f"Status: <b>{status}</b>",
+        f"Dashboard Report: <a href=\"{dashboard_url}\">{dashboard_url}</a>",
+    ]
+    if workflow_url:
+        lines.append(f"\nWorkflow run: <a href=\"{workflow_url}\">{workflow_url}</a>")
     return _post("\n".join(lines))
+
+notify_simple_report(
+    dashboard_url="https://maazway.github.io/pagespeed-monitor-sgm/",
+    workflow_url="https://github.com/maazway/pagespeed-monitor-sgm/actions/runs/...",
+    status="SUCCESS"
+)
