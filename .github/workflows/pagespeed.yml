@@ -3,7 +3,7 @@ name: Build & Deploy PSI Dashboard
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 23 * * *" # 06:00 WIB setiap hari
+    - cron: "0 23 * * *" # 06:00 WIB
 
 permissions:
   contents: write
@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Ambil data history lama dari gh-pages supaya tidak hilang
+      # Ambil history lama dari gh-pages supaya tidak hilang
       - name: Checkout gh-pages (for history)
         uses: actions/checkout@v4
         with:
@@ -31,7 +31,7 @@ jobs:
         run: |
           set -e
           SRC="gh-pages"
-          DEST="pagespeed-monitor-ci/dashboard"
+          DEST="dashboard"
           mkdir -p "$DEST"
           if [ -f "$SRC/history.json" ]; then cp -f "$SRC/history.json" "$DEST/"; fi
           if [ -d "$SRC/history" ]; then rsync -a "$SRC/history/" "$DEST/history/"; fi
@@ -53,18 +53,18 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python pagespeed-monitor-ci/psi_csv_dashboard.py \
-            --csv pagespeed-monitor-ci/urls.csv \
-            --out-csv pagespeed-monitor-ci/dashboard/psi_results.csv \
-            --out-json pagespeed-monitor-ci/dashboard/psi_results.json \
-            --out-html pagespeed-monitor-ci/dashboard/index.html \
-            --sleep 1.2
+          python psi_csv_dashboard.py \
+            --csv urls.csv \
+            --out-csv dashboard/psi_results.csv \
+            --out-json dashboard/psi_results.json \
+            --out-html dashboard/index.html \
+            --sleep 1.0
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: pagespeed-monitor-ci/dashboard
+          publish_dir: dashboard
           enable_jekyll: false
 
       - name: Kirim Notif Telegram (SUCCESS)
