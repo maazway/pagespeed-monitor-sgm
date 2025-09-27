@@ -45,3 +45,8 @@ allure-report/
 # --- Node/npm if any (optional) ---
 node_modules/
 npm-debug.log*
+
+# Build artifacts (dibuat saat CI)
+dashboard/
+psi_results.csv
+psi_results.json
