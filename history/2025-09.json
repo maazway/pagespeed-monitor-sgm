@@ -70,5 +70,41 @@
     "best_practices": 74,
     "seo": 92,
     "run_at_utc": "2025-09-27T17:50:13Z"
+  },
+  {
+    "url": "https://generasimaju.co.id",
+    "strategy": "mobile",
+    "performance": 56,
+    "accessibility": 77,
+    "best_practices": 71,
+    "seo": 92,
+    "run_at_utc": "2025-09-27T17:58:02Z"
+  },
+  {
+    "url": "https://generasimaju.co.id",
+    "strategy": "desktop",
+    "performance": 43,
+    "accessibility": 80,
+    "best_practices": 70,
+    "seo": 92,
+    "run_at_utc": "2025-09-27T17:58:02Z"
+  },
+  {
+    "url": "https://generasimaju.co.id/produk",
+    "strategy": "mobile",
+    "performance": 65,
+    "accessibility": 77,
+    "best_practices": 93,
+    "seo": 92,
+    "run_at_utc": "2025-09-27T17:58:02Z"
+  },
+  {
+    "url": "https://generasimaju.co.id/produk",
+    "strategy": "desktop",
+    "performance": 57,
+    "accessibility": 73,
+    "best_practices": 74,
+    "seo": 92,
+    "run_at_utc": "2025-09-27T17:58:02Z"
   }
 ]
