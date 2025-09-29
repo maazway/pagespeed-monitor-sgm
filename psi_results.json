@@ -4,10 +4,11 @@
     {
       "url": "https://www.generasimaju.co.id/",
       "strategy": "mobile",
-      "performance": 54,
-      "accessibility": 77,
-      "best_practices": 71,
-      "seo": 92,
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0,
+      "error": "HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=60)"
     },
     {
       "url": "https://www.generasimaju.co.id/",
