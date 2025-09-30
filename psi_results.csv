@@ -1,53 +1,53 @@
 url,strategy,performance,accessibility,best_practices,seo,error
-https://www.generasimaju.co.id/,mobile,44,77,71,92,
-https://www.generasimaju.co.id/,desktop,37,80,70,92,
-https://www.generasimaju.co.id/search?q=Zat+Besi,mobile,52,80,71,61,
-https://www.generasimaju.co.id/search?q=Zat+Besi,desktop,62,75,74,61,
-https://www.generasimaju.co.id/klub-generasi-maju/submit-kode-unik,mobile,87,80,96,92,
-https://www.generasimaju.co.id/klub-generasi-maju/submit-kode-unik,desktop,45,79,70,92,
-https://www.generasimaju.co.id/klub-generasi-maju/login,mobile,77,83,96,92,
-https://www.generasimaju.co.id/klub-generasi-maju/login,desktop,55,83,70,92,
-https://www.generasimaju.co.id/klub-generasi-maju/register,mobile,78,78,96,92,
-https://www.generasimaju.co.id/klub-generasi-maju/register,desktop,65,77,70,92,
-https://www.generasimaju.co.id/produk,mobile,67,77,93,92,
-https://www.generasimaju.co.id/produk,desktop,61,73,74,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-1-plus,mobile,64,71,93,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-1-plus,desktop,38,71,70,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-3-plus,mobile,63,71,96,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-3-plus,desktop,43,71,74,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus,mobile,68,71,96,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus,desktop,38,71,74,92,
-https://www.generasimaju.co.id/produk/sgm-bunda-hamil-menyusui,mobile,65,71,93,92,
-https://www.generasimaju.co.id/produk/sgm-bunda-hamil-menyusui,desktop,39,71,70,92,
-https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri,mobile,57,73,93,92,
-https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri,desktop,40,74,74,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-soya,mobile,63,73,93,92,
-https://www.generasimaju.co.id/produk/sgm-eksplor-soya,desktop,24,74,70,92,
-https://www.generasimaju.co.id/produk/sgm-optigrow,mobile,54,73,93,92,
-https://www.generasimaju.co.id/produk/sgm-optigrow,desktop,41,77,74,92,
-https://www.generasimaju.co.id/artikel,mobile,55,81,68,92,
-https://www.generasimaju.co.id/artikel,desktop,65,78,74,92,
-https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui,mobile,0,0,0,0,"HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=60)"
-https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui,desktop,65,71,74,85,
-https://www.generasimaju.co.id/tools/kalkulator-zat-besi,mobile,89,83,96,92,
-https://www.generasimaju.co.id/tools/kalkulator-zat-besi,desktop,63,83,70,92,
-https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda,mobile,75,84,96,92,
-https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda,desktop,67,83,70,92,
-https://www.generasimaju.co.id/klub-generasi-maju,mobile,0,0,0,0,500 Server Error: Internal Server Error for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fklub-generasi-maju&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
-https://www.generasimaju.co.id/klub-generasi-maju,desktop,65,84,74,92,
-https://www.generasimaju.co.id/teman-bunda,mobile,47,87,96,92,
-https://www.generasimaju.co.id/teman-bunda,desktop,41,86,70,92,
-https://www.generasimaju.co.id/diary-generasi-maju,mobile,83,78,96,85,
-https://www.generasimaju.co.id/diary-generasi-maju,desktop,57,79,70,85,
-https://www.generasimaju.co.id/sekolah-generasi-maju,mobile,72,83,89,92,
-https://www.generasimaju.co.id/sekolah-generasi-maju,desktop,59,79,70,92,
-https://www.generasimaju.co.id/generasi-maju-bebas-stunting,mobile,59,74,68,92,
-https://www.generasimaju.co.id/generasi-maju-bebas-stunting,desktop,50,75,74,92,
-https://www.generasimaju.co.id/bersama-cegah-anemia,mobile,65,74,71,92,
-https://www.generasimaju.co.id/bersama-cegah-anemia,desktop,62,74,74,92,
-https://www.generasimaju.co.id/tools/kalkulator-kehamilan,mobile,39,81,71,92,
-https://www.generasimaju.co.id/tools/kalkulator-kehamilan,desktop,55,78,74,92,
-https://www.generasimaju.co.id/tools/cek-resiko-alergi,mobile,96,84,86,92,
-https://www.generasimaju.co.id/tools/cek-resiko-alergi,desktop,72,84,70,92,
-https://www.generasimaju.co.id/event-dan-promo,mobile,75,75,71,92,
-https://www.generasimaju.co.id/event-dan-promo,desktop,90,70,74,92,
+https://www.generasimaju.co.id/,mobile,39,77,71,85,
+https://www.generasimaju.co.id/,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/search?q=Zat+Besi,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fsearch%3Fq%3DZat%2BBesi&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/search?q=Zat+Besi,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fsearch%3Fq%3DZat%2BBesi&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/klub-generasi-maju/submit-kode-unik,mobile,69,67,96,85,
+https://www.generasimaju.co.id/klub-generasi-maju/submit-kode-unik,desktop,42,84,74,92,
+https://www.generasimaju.co.id/klub-generasi-maju/login,mobile,59,70,93,92,
+https://www.generasimaju.co.id/klub-generasi-maju/login,desktop,44,83,70,85,
+https://www.generasimaju.co.id/klub-generasi-maju/register,mobile,75,78,96,85,
+https://www.generasimaju.co.id/klub-generasi-maju/register,desktop,69,77,70,85,
+https://www.generasimaju.co.id/produk,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-1-plus,mobile,0,0,0,0,500 Server Error: Internal Server Error for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-1-plus&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-1-plus,desktop,43,71,70,85,
+https://www.generasimaju.co.id/produk/sgm-eksplor-3-plus,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-3-plus&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-3-plus,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-3-plus&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-5-plus&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus,desktop,39,71,74,92,
+https://www.generasimaju.co.id/produk/sgm-bunda-hamil-menyusui,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-bunda-hamil-menyusui&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-bunda-hamil-menyusui,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-bunda-hamil-menyusui&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri,mobile,58,73,93,85,
+https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri,desktop,59,70,74,85,
+https://www.generasimaju.co.id/produk/sgm-eksplor-soya,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-soya&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-eksplor-soya,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-eksplor-soya&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-optigrow,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-optigrow&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/produk/sgm-optigrow,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fproduk%2Fsgm-optigrow&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/artikel,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fartikel&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/artikel,desktop,60,78,74,85,
+https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fartikel%2Fmenyusui%2Fnutrisi%2Fvitamin-c-untuk-ibu-menyusui&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fartikel%2Fmenyusui%2Fnutrisi%2Fvitamin-c-untuk-ibu-menyusui&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/tools/kalkulator-zat-besi,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Ftools%2Fkalkulator-zat-besi&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/tools/kalkulator-zat-besi,desktop,62,83,70,85,
+https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Ftools%2Fkalkulator-zat-besi-bunda&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Ftools%2Fkalkulator-zat-besi-bunda&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/klub-generasi-maju,mobile,45,76,96,85,
+https://www.generasimaju.co.id/klub-generasi-maju,desktop,0,0,0,0,"HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=60)"
+https://www.generasimaju.co.id/teman-bunda,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fteman-bunda&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/teman-bunda,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fteman-bunda&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/diary-generasi-maju,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fdiary-generasi-maju&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/diary-generasi-maju,desktop,52,79,70,77,
+https://www.generasimaju.co.id/sekolah-generasi-maju,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fsekolah-generasi-maju&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/sekolah-generasi-maju,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fsekolah-generasi-maju&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/generasi-maju-bebas-stunting,mobile,58,79,68,92,
+https://www.generasimaju.co.id/generasi-maju-bebas-stunting,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fgenerasi-maju-bebas-stunting&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/bersama-cegah-anemia,mobile,67,74,71,85,
+https://www.generasimaju.co.id/bersama-cegah-anemia,desktop,0,0,0,0,"HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=60)"
+https://www.generasimaju.co.id/tools/kalkulator-kehamilan,mobile,0,0,0,0,"HTTPSConnectionPool(host='www.googleapis.com', port=443): Read timed out. (read timeout=60)"
+https://www.generasimaju.co.id/tools/kalkulator-kehamilan,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Ftools%2Fkalkulator-kehamilan&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/tools/cek-resiko-alergi,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Ftools%2Fcek-resiko-alergi&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/tools/cek-resiko-alergi,desktop,66,84,70,92,
+https://www.generasimaju.co.id/event-dan-promo,mobile,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fevent-dan-promo&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
+https://www.generasimaju.co.id/event-dan-promo,desktop,0,0,0,0,400 Client Error: Bad Request for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fwww.generasimaju.co.id%2Fevent-dan-promo&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&locale=en&key=AIzaSyCs_Busfvh_Q-yigpSVbPVdKaoNAVKtd2o
