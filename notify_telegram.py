@@ -24,11 +24,11 @@ def _post(text: str) -> bool:
         return False
 
 def notify_simple_report(status: str = "SUCCESS") -> bool:
-    """Kirim pesan ringkas hasil PageSpeed ke Telegram."""
+    """Kirim pesan ringkas hasil PageSpeed Generasi Maju ke Telegram."""
     wib = timezone(timedelta(hours=7))
     ts = datetime.now(wib).strftime("%d/%m/%Y %H:%M:%S WIB")
     lines = [
-        "<b>Hasil Pengecekan PageSpeed</b>",
+        "<b>Hasil Pengecekan PageSpeed Generasi Maju</b>",
         f"Tanggal & Waktu: {ts}",
         f"Status: <b>{status}</b>",
         "Dashboard utama (UI):",
