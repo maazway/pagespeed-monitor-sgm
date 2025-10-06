@@ -2,6 +2,7 @@ import os
 import requests
 from datetime import datetime, timezone, timedelta
 import argparse
+import time  # tambahan
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")  # single chat or channel id (@channelusername)
@@ -23,18 +24,32 @@ def _post(text: str) -> bool:
     except Exception:
         return False
 
+# === tambahan
+def format_duration(seconds: int) -> str:
+    m, s = divmod(int(seconds), 60)
+    return f"{m}m {s}s" if m else f"{s}s"
+
 def notify_simple_report(status: str = "SUCCESS") -> bool:
-    """Kirim pesan ringkas hasil PageSpeed Generasi Maju ke Telegram."""
+    """Kirim pesan ringkas hasil PageSpeed Generasi Maju ke Telegram + durasi run."""
     wib = timezone(timedelta(hours=7))
     ts = datetime.now(wib).strftime("%d/%m/%Y %H:%M:%S WIB")
+
+    # === tambahan: ambil total durasi workflow dari env
+    start = float(os.getenv("START_TS", time.time()))
+    end = float(os.getenv("END_TS", time.time()))
+    duration = format_duration(end - start)
+
     lines = [
         "<b>Hasil Pengecekan PageSpeed Generasi Maju</b>",
-        f"Tanggal & Waktu: {ts}",
-        f"Status: <b>{status}</b>",
-        "Dashboard utama (UI):",
-        "<a href=\"https://maazway.github.io/pagespeed-monitor-sgm/\">https://maazway.github.io/pagespeed-monitor-sgm/</a>",
         "",
-        "History (gabungan semua run):",
+        f"Tanggal & Waktu: <b>{ts}</b>",
+        f"Status: <b>{status}</b>",
+        f"Durasi Run: <b>{duration}</b>",  # tambahan
+        "",
+        "Dashboard utama:",
+        "<a href=\"https://maazway.github.io/pagespeed-monitor-sgm\">https://maazway.github.io/pagespeed-monitor-sgm</a>",
+        "",
+        "History (json file):",
         "<a href=\"https://maazway.github.io/pagespeed-monitor-sgm/history.json\">https://maazway.github.io/pagespeed-monitor-sgm/history.json</a>",
     ]
     return _post("\n".join(lines))

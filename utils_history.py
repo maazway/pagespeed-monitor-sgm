@@ -49,10 +49,10 @@ def append_history_with_rotation(results):
     # keep last HISTORY_MAX_ENTRIES
     if len(data) > HISTORY_MAX_ENTRIES:
         data = data[-HISTORY_MAX_ENTRIES:]
-    HISTORY_FILE.write_text(
-        json.dumps(data, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8"
-    )
+    # tulis dengan indent agar rapih
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     # monthly archive file
     month_key = now[:7]  # YYYY-MM
@@ -64,12 +64,11 @@ def append_history_with_rotation(results):
     except Exception:
         mdata = []
     mdata.extend(out_rows)
-    month_path.write_text(
-        json.dumps(mdata, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8"
-    )
+    with open(month_path, "w", encoding="utf-8") as f:
+        json.dump(mdata, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(
-        f"✅ history.json updated: {len(data)} records (last {HISTORY_MAX_ENTRIES}); "
+        f"history.json updated: {len(data)} records (last {HISTORY_MAX_ENTRIES}); "
         f"{month_path.name} archive: {len(mdata)} records"
     )

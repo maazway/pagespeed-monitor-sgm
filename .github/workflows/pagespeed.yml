@@ -3,7 +3,7 @@ name: Build & Deploy PSI Dashboard
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 23 * * *" # 06:00 WIB
+    - cron: "0 22 * * *" # 05:00 WIB
 
 permissions:
   contents: write
@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # === Tambahan: total durasi mulai dihitung sejak sini ===
+      - name: Set workflow start time
+        run: echo "START_TS=$(date +%s)" >> $GITHUB_ENV
+
       - name: Checkout main branch
         uses: actions/checkout@v4
         with:
@@ -66,6 +70,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dashboard
           enable_jekyll: false
+
+      # === Tambahan: set END_TS selalu jalan (sukses/gagal) ===
+      - name: Set workflow end time
+        if: always()
+        run: echo "END_TS=$(date +%s)" >> $GITHUB_ENV
 
       - name: Kirim Notif Telegram (SUCCESS)
         if: success()
