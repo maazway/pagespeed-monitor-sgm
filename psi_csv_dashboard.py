@@ -6,6 +6,7 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 from utils_history import append_history_with_rotation
+from retry_wrapper import run_psi_until_success
 
 load_dotenv()
 
@@ -47,8 +48,11 @@ def run_psi(url: str, strategy: str = "mobile", api_key: str = "", locale: str =
 
 
 def collect_psi_results(csv_path: str, sleep_sec: float = 2.0):
-    api_key = os.getenv("PSI_API_KEY", "")
-    locale = os.getenv("LOCALE", "en")
+    # >>> Tambahan agar api_key & locale tersedia di scope ini
+    api_key = os.getenv("PSI_API_KEY", "").strip()
+    if not api_key:
+        raise SystemExit("PSI_API_KEY is missing")
+    locale = (os.getenv("LOCALE", "en") or "en").strip()
 
     items = []
     with open(csv_path, "r", encoding="utf-8") as f:
@@ -62,10 +66,15 @@ def collect_psi_results(csv_path: str, sleep_sec: float = 2.0):
     if not items:
         raise SystemExit("urls.csv empty or invalid (expected headers: url,strategy).")
 
-    results = []
+    results = []  # <- pastikan deklarasi ini ADA sebelum try/except & append
+
     for i, (u, st) in enumerate(items, start=1):
         try:
-            res = run_psi(u, st, api_key, locale)
+            # Loop-until-success (ON via env, OFF kalau LOOP_UNTIL_SUCCESS=0)
+            if os.getenv("LOOP_UNTIL_SUCCESS", "1") == "1":
+                res = run_psi_until_success(run_psi, u, st, api_key, locale)
+            else:
+                res = run_psi(u, st, api_key, locale)
         except Exception as e:
             res = {
                 "url": u, "strategy": st,
@@ -77,8 +86,8 @@ def collect_psi_results(csv_path: str, sleep_sec: float = 2.0):
             }
         results.append(res)
         time.sleep(sleep_sec)
-    return results
 
+    return results
 
 def write_csv_and_json(rows, out_csv, out_json):
     fields = ["url", "strategy", "performance", "accessibility", "best_practices", "seo", "error"]

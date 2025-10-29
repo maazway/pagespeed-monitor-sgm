@@ -3,7 +3,7 @@ name: Build & Deploy PSI Dashboard
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 22 * * *" # 05:00 WIB
+    - cron: '0 22 * * *' # 05:00 WIB
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -53,7 +53,12 @@ jobs:
       - name: Run PSI Dashboard Script
         env:
           PSI_API_KEY: ${{ secrets.PSI_API_KEY }}
-          LOCALE: "en"
+          LOCALE: 'en'
+          LOOP_UNTIL_SUCCESS: '1'
+          MAX_MINUTES: '55'
+          MAX_ATTEMPTS: '0'
+          RETRY_BASE_SECONDS: '3'
+          RETRY_MAX_SECONDS: '120'
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
@@ -76,18 +81,85 @@ jobs:
         if: always()
         run: echo "END_TS=$(date +%s)" >> $GITHUB_ENV
 
+      # --- Telegram notifications ---
       - name: Kirim Notif Telegram (SUCCESS)
         if: success()
+        shell: bash
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TZ: Asia/Jakarta
         run: |
-          python -m notify_telegram --status SUCCESS
+          python notify_telegram.py --status SUCCESS \
+            --site "https://www.generasimaju.co.id" \
+            --dashboard "https://maazway.github.io/pagespeed-monitor-sgm"
 
       - name: Kirim Notif Telegram (FAILED)
         if: failure()
+        shell: bash
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TZ: Asia/Jakarta
         run: |
-          python -m notify_telegram --status FAILED
+          python notify_telegram.py --status FAILED \
+            --site "https://www.generasimaju.co.id" \
+            --dashboard "https://maazway.github.io/pagespeed-monitor-sgm"
+
+      - name: Send Email Report (SUCCESS)
+        if: success()
+        shell: bash
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_SUBJECT_PREFIX: ${{ secrets.EMAIL_SUBJECT_PREFIX }}
+          TZ: Asia/Jakarta
+        run: |
+          DUR=$(python - <<'PY'
+          import os
+          s = int(os.getenv("START_TS","0") or 0)
+          e = int(os.getenv("END_TS","0") or 0)
+          d = max(e - s, 0)
+          print(f"{d:.2f}")
+          PY
+          )
+          echo "Run duration: $DUR seconds"
+          python notify_email.py \
+            --site "https://www.generasimaju.co.id" \
+            --status "Success" \
+            --duration "$DUR" \
+            --report "dashboard/index.html" \
+            --dashboard "https://maazway.github.io/pagespeed-monitor-sgm"
+
+      - name: Send Email Report (FAILED)
+        if: failure()
+        shell: bash
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_SUBJECT_PREFIX: ${{ secrets.EMAIL_SUBJECT_PREFIX }}
+          TZ: Asia/Jakarta
+        run: |
+          DUR=$(python - <<'PY'
+          import os
+          s = int(os.getenv("START_TS","0") or 0)
+          e = int(os.getenv("END_TS","0") or 0)
+          d = max(e - s, 0)
+          print(f"{d:.2f}")
+          PY
+          )
+          echo "Run duration: $DUR seconds"
+          python notify_email.py \
+            --site "https://www.generasimaju.co.id" \
+            --status "Fail" \
+            --duration "$DUR" \
+            --report "dashboard/index.html" \
+            --dashboard "https://maazway.github.io/pagespeed-monitor-sgm"
