@@ -59,8 +59,8 @@ jobs:
           MAX_ATTEMPTS: '0'
           RETRY_BASE_SECONDS: '3'
           RETRY_MAX_SECONDS: '120'
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python psi_csv_dashboard.py \
             --csv urls.csv \
