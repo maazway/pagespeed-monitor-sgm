@@ -4,33 +4,33 @@
     {
       "url": "https://www.generasimaju.co.id/",
       "strategy": "mobile",
-      "performance": 49,
+      "performance": 72,
       "accessibility": 77,
-      "best_practices": 69,
+      "best_practices": 92,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/",
       "strategy": "desktop",
-      "performance": 64,
+      "performance": 71,
       "accessibility": 79,
-      "best_practices": 69,
+      "best_practices": 92,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/search?q=Zat+Besi",
       "strategy": "mobile",
-      "performance": 51,
+      "performance": 53,
       "accessibility": 80,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 69
     },
     {
       "url": "https://www.generasimaju.co.id/search?q=Zat+Besi",
       "strategy": "desktop",
-      "performance": 60,
+      "performance": 88,
       "accessibility": 76,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 69
     },
     {
@@ -44,15 +44,15 @@
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju/submit-kode-unik",
       "strategy": "desktop",
-      "performance": 48,
+      "performance": 42,
       "accessibility": 79,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju/login",
       "strategy": "mobile",
-      "performance": 77,
+      "performance": 76,
       "accessibility": 84,
       "best_practices": 77,
       "seo": 92
@@ -60,15 +60,15 @@
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju/login",
       "strategy": "desktop",
-      "performance": 47,
+      "performance": 48,
       "accessibility": 83,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju/register",
       "strategy": "mobile",
-      "performance": 89,
+      "performance": 70,
       "accessibility": 77,
       "best_practices": 77,
       "seo": 92
@@ -78,7 +78,7 @@
       "strategy": "desktop",
       "performance": 61,
       "accessibility": 76,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
@@ -92,15 +92,15 @@
     {
       "url": "https://www.generasimaju.co.id/produk",
       "strategy": "desktop",
-      "performance": 66,
+      "performance": 71,
       "accessibility": 73,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-1-plus",
       "strategy": "mobile",
-      "performance": 62,
+      "performance": 64,
       "accessibility": 71,
       "best_practices": 73,
       "seo": 92
@@ -110,7 +110,7 @@
       "strategy": "desktop",
       "performance": 38,
       "accessibility": 71,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
@@ -126,13 +126,13 @@
       "strategy": "desktop",
       "performance": 38,
       "accessibility": 71,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus",
       "strategy": "mobile",
-      "performance": 64,
+      "performance": 66,
       "accessibility": 71,
       "best_practices": 77,
       "seo": 92
@@ -140,15 +140,15 @@
     {
       "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-5-plus",
       "strategy": "desktop",
-      "performance": 37,
+      "performance": 39,
       "accessibility": 71,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/produk/sgm-bunda-hamil-menyusui",
       "strategy": "mobile",
-      "performance": 63,
+      "performance": 67,
       "accessibility": 71,
       "best_practices": 73,
       "seo": 92
@@ -158,11 +158,43 @@
       "strategy": "desktop",
       "performance": 47,
       "accessibility": 71,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri",
+      "strategy": "mobile",
+      "performance": 65,
+      "accessibility": 74,
+      "best_practices": 73,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri",
+      "strategy": "desktop",
+      "performance": 40,
+      "accessibility": 75,
+      "best_practices": 77,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-soya",
+      "strategy": "mobile",
+      "performance": 62,
+      "accessibility": 74,
+      "best_practices": 73,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-soya",
+      "strategy": "desktop",
+      "performance": 40,
+      "accessibility": 75,
+      "best_practices": 73,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/produk/sgm-optigrow",
       "strategy": "mobile",
       "performance": 63,
       "accessibility": 74,
@@ -170,97 +202,65 @@
       "seo": 92
     },
     {
-      "url": "https://www.generasimaju.co.id/produk/sgm-family-yummy-nutri",
-      "strategy": "desktop",
-      "performance": 44,
-      "accessibility": 75,
-      "best_practices": 54,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-soya",
-      "strategy": "mobile",
-      "performance": 65,
-      "accessibility": 74,
-      "best_practices": 73,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/produk/sgm-eksplor-soya",
-      "strategy": "desktop",
-      "performance": 39,
-      "accessibility": 75,
-      "best_practices": 50,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/produk/sgm-optigrow",
-      "strategy": "mobile",
-      "performance": 64,
-      "accessibility": 74,
-      "best_practices": 73,
-      "seo": 92
-    },
-    {
       "url": "https://www.generasimaju.co.id/produk/sgm-optigrow",
       "strategy": "desktop",
-      "performance": 36,
+      "performance": 46,
       "accessibility": 78,
-      "best_practices": 54,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/artikel",
-      "strategy": "mobile",
-      "performance": 53,
-      "accessibility": 81,
-      "best_practices": 50,
-      "seo": 100
-    },
-    {
-      "url": "https://www.generasimaju.co.id/artikel",
-      "strategy": "desktop",
-      "performance": 65,
-      "accessibility": 79,
-      "best_practices": 54,
-      "seo": 100
-    },
-    {
-      "url": "https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui",
-      "strategy": "mobile",
-      "performance": 80,
-      "accessibility": 76,
-      "best_practices": 54,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui",
-      "strategy": "desktop",
-      "performance": 69,
-      "accessibility": 72,
-      "best_practices": 54,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi",
-      "strategy": "mobile",
-      "performance": 89,
-      "accessibility": 83,
       "best_practices": 77,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/artikel",
+      "strategy": "mobile",
+      "performance": 47,
+      "accessibility": 81,
+      "best_practices": 73,
       "seo": 100
     },
     {
-      "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi",
+      "url": "https://www.generasimaju.co.id/artikel",
       "strategy": "desktop",
       "performance": 74,
+      "accessibility": 79,
+      "best_practices": 77,
+      "seo": 100
+    },
+    {
+      "url": "https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui",
+      "strategy": "mobile",
+      "performance": 81,
+      "accessibility": 76,
+      "best_practices": 77,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/artikel/menyusui/nutrisi/vitamin-c-untuk-ibu-menyusui",
+      "strategy": "desktop",
+      "performance": 66,
+      "accessibility": 72,
+      "best_practices": 77,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi",
+      "strategy": "mobile",
+      "performance": 90,
       "accessibility": 83,
-      "best_practices": 50,
+      "best_practices": 77,
+      "seo": 100
+    },
+    {
+      "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi",
+      "strategy": "desktop",
+      "performance": 76,
+      "accessibility": 83,
+      "best_practices": 73,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda",
       "strategy": "mobile",
-      "performance": 80,
+      "performance": 84,
       "accessibility": 83,
       "best_practices": 77,
       "seo": 100
@@ -268,15 +268,15 @@
     {
       "url": "https://www.generasimaju.co.id/tools/kalkulator-zat-besi-bunda",
       "strategy": "desktop",
-      "performance": 77,
+      "performance": 61,
       "accessibility": 83,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju",
       "strategy": "mobile",
-      "performance": 68,
+      "performance": 79,
       "accessibility": 80,
       "best_practices": 73,
       "seo": 100
@@ -284,15 +284,15 @@
     {
       "url": "https://www.generasimaju.co.id/klub-generasi-maju",
       "strategy": "desktop",
-      "performance": 65,
+      "performance": 61,
       "accessibility": 80,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/teman-bunda",
       "strategy": "mobile",
-      "performance": 63,
+      "performance": 47,
       "accessibility": 87,
       "best_practices": 77,
       "seo": 100
@@ -300,15 +300,15 @@
     {
       "url": "https://www.generasimaju.co.id/teman-bunda",
       "strategy": "desktop",
-      "performance": 47,
+      "performance": 44,
       "accessibility": 86,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/diary-generasi-maju",
       "strategy": "mobile",
-      "performance": 82,
+      "performance": 73,
       "accessibility": 79,
       "best_practices": 77,
       "seo": 92
@@ -316,15 +316,15 @@
     {
       "url": "https://www.generasimaju.co.id/diary-generasi-maju",
       "strategy": "desktop",
-      "performance": 37,
+      "performance": 60,
       "accessibility": 79,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/sekolah-generasi-maju",
       "strategy": "mobile",
-      "performance": 71,
+      "performance": 70,
       "accessibility": 84,
       "best_practices": 73,
       "seo": 100
@@ -332,64 +332,63 @@
     {
       "url": "https://www.generasimaju.co.id/sekolah-generasi-maju",
       "strategy": "desktop",
-      "performance": 49,
+      "performance": 63,
       "accessibility": 79,
-      "best_practices": 50,
-      "seo": 100,
-      "retry_attempts": 2
+      "best_practices": 73,
+      "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/generasi-maju-bebas-stunting",
-      "strategy": "mobile",
-      "performance": 42,
-      "accessibility": 74,
-      "best_practices": 50,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/generasi-maju-bebas-stunting",
-      "strategy": "desktop",
-      "performance": 44,
-      "accessibility": 76,
-      "best_practices": 54,
-      "seo": 92
-    },
-    {
-      "url": "https://www.generasimaju.co.id/bersama-cegah-anemia",
       "strategy": "mobile",
       "performance": 64,
       "accessibility": 74,
-      "best_practices": 50,
+      "best_practices": 73,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/generasi-maju-bebas-stunting",
+      "strategy": "desktop",
+      "performance": 53,
+      "accessibility": 76,
+      "best_practices": 77,
+      "seo": 92
+    },
+    {
+      "url": "https://www.generasimaju.co.id/bersama-cegah-anemia",
+      "strategy": "mobile",
+      "performance": 73,
+      "accessibility": 74,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/bersama-cegah-anemia",
       "strategy": "desktop",
-      "performance": 66,
+      "performance": 63,
       "accessibility": 74,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/tools/kalkulator-kehamilan",
       "strategy": "mobile",
-      "performance": 32,
+      "performance": 34,
       "accessibility": 82,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/tools/kalkulator-kehamilan",
       "strategy": "desktop",
-      "performance": 63,
+      "performance": 64,
       "accessibility": 79,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/tools/cek-resiko-alergi",
       "strategy": "mobile",
-      "performance": 93,
+      "performance": 94,
       "accessibility": 80,
       "best_practices": 88,
       "seo": 92
@@ -397,25 +396,25 @@
     {
       "url": "https://www.generasimaju.co.id/tools/cek-resiko-alergi",
       "strategy": "desktop",
-      "performance": 62,
+      "performance": 64,
       "accessibility": 80,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 92
     },
     {
       "url": "https://www.generasimaju.co.id/event-dan-promo",
       "strategy": "mobile",
-      "performance": 66,
+      "performance": 67,
       "accessibility": 75,
-      "best_practices": 50,
+      "best_practices": 73,
       "seo": 100
     },
     {
       "url": "https://www.generasimaju.co.id/event-dan-promo",
       "strategy": "desktop",
-      "performance": 73,
+      "performance": 79,
       "accessibility": 71,
-      "best_practices": 54,
+      "best_practices": 77,
       "seo": 100
     }
   ]
